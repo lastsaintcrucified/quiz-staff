@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect } from "react";
+import { fetchQuestionStartAsync } from "./redux/question/question.action";
+import { connect } from "react-redux";
+import Question from "./component/question/question.component";
 
-function App() {
+const App = () => {
+  // useEffect(() => {
+  //   fetchQuestionStartAsync();
+  // }, [fetchQuestionStartAsync]);
+  // console.log("question-->", question);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Quiz on mental health</h1>
+      <Question />
     </div>
   );
-}
-
+};
+// const mapStateToProps = ({ question }) => ({
+//   question,
+// });
+// const mapDispatchToProps = (dispatch) => ({
+//   fetchQuestionStartAsync: () => dispatch(fetchQuestionStartAsync()),
+// });
 export default App;
