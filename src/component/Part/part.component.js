@@ -3,11 +3,11 @@ import { connect } from "react-redux";
 import { fetchAnswer } from "../../redux/answer/answer.action";
 import "./part.styles.css";
 
-const Part = ({ op, fetchAnswer }) => {
+const Part = ({ op, i, fetchAnswer }) => {
   const handleChange = (e) => {
     fetchAnswer({
-      name: e.currentTarget.name,
-      value: e.currentTarget.value,
+      opName: e.currentTarget.name,
+      opValue: e.currentTarget.value,
     });
   };
 
@@ -17,7 +17,7 @@ const Part = ({ op, fetchAnswer }) => {
         type="radio"
         id={op.question_id}
         name={op.question_id}
-        value={op.correct_answer}
+        value={op.id}
         onChange={handleChange}
       />
       <label htmlFor={op.answer}>{op.answer}</label>

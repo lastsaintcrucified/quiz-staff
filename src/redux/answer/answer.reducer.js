@@ -7,7 +7,7 @@ export const answerReducer = (state = INITIAL_STATE, action) => {
     case answerActionTypes.FETCH_ANSWER:
       return {
         ...state,
-        [action.payload.name]: action.payload.value,
+        [action.payload.opName]: action.payload.opValue,
       };
     default:
       return state;

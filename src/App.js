@@ -1,7 +1,7 @@
 import "./App.css";
-import { useEffect } from "react";
-import { fetchQuestionStartAsync } from "./redux/question/question.action";
-import { connect } from "react-redux";
+// import { useEffect } from "react";
+// import { fetchQuestionStartAsync } from "./redux/question/question.action";
+// import { connect } from "react-redux";
 import Question from "./component/question/question.component";
 
 const App = () => {
